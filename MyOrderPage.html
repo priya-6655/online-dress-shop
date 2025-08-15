@@ -72,10 +72,6 @@
                 String(itm.customerMobile).trim() === String(currentUser.usrMobile).trim()
             );
 
-            console.log("All orders:", orders);
-            console.log("Current user:", currentUser);
-
-
             if (myOrders.length === 0) {
                 orderPage.innerHTML = "<p>No orders found.</p>";
                 return;
@@ -86,6 +82,7 @@
                 <h5>${order.name || "Unnamed Item"}</h5>
                 <p>Order Date: ${order.orderDate || "N/A"}</p>
                 <p>Deliver Date: ${order.deliverDate || "N/A"}</p>
+                <p>Deliver Mode: Cash on Delivery</p>
                 <img src="${order.src || ''}" alt="product" style="max-width:100px"/>
             </div>
     `).join('');
