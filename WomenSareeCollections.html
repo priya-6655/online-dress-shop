@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="practice1.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>MayuraSilks</title>
+    <script>
+
+
+        function backToHome() {
+
+            window.location.href = 'CustomerPage.html'
+        }
+
+
+        // Logout funtion
+        function userLogout() {
+            window.location.href = "UserLogin.html"
+        }
+
+        function GoToOderPage() {
+            window.location.href = 'MyOrderPage.html'
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div class="fluid-container name-header">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+
+                <div class="col-md-3 col-12 mb-2 d-flex flex-md-row flex-column justify-content-md-end">
+                    <img src="https://www.pngplay.com/wp-content/uploads/12/Peacock-PNG-Pic-Background.png"
+                        class="peacockLogo" />
+                    <h1 class="text-success brand">MayuRa</h1>
+                    <p class="text-danger subBrand">Silks</p>
+                </div>
+
+                <div class="col-md-4 col-12 mb-2">
+                    <form action="">
+                        <input type="search" class="form-control" id="Dsearch" placeholder="Search here!" />
+                    </form>
+                </div>
+                <div
+                    class=" col-md-5 col-12 insideNav d-flex flex-column flex-md-row justify-content-md-end align-items-center text-center gap-3">
+                    <span onclick="GoToOderPage()"><i class="fa-solid fa-heart mx-1"></i>My Orders</span>
+
+                    <button type="button" onclick="showMyCart()"
+                        class="btn position-relative d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-cart-shopping fs-5"></i>
+                        <span>My Cart</span>
+                        <span id="cartCount"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                        </span>
+                    </button>
+
+                    <span onclick="userLogout()"><i class="fa-solid fa-unlock mx-1"></i> Logout</span>
+                    <span onclick="backToHome()"><i class="fa-solid fa-house"></i> Home</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <div class="row align-items-center justify-content-center mt-5 mx-2 gap-4">
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Office Wear" data-price="780"
+                data-src="https://www.forsarees.com/cdn/shop/collections/White_Office_Wear_Saree.jpg?v=1723537526&width=750">
+
+                <img src="https://www.forsarees.com/cdn/shop/collections/White_Office_Wear_Saree.jpg?v=1723537526&width=750"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Office Wear</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>780</span>
+
+            </div>
+
+            <div class="col-12 col-md-2 d-flex align-items-center justify-content-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Embroidered Silk Saree" data-price="1460"
+                data-src="https://mysilklove.com/cdn/shop/files/msl-l4.jpg?v=1702463192&width=1000">
+
+                <img src="https://mysilklove.com/cdn/shop/files/msl-l4.jpg?v=1702463192&width=1000"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Embroidered Silk Saree</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1460</span>
+
+            </div>
+
+            <div class="col-12 col-md-2 d-flex align-items-center justify-content-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Disgner Saree" data-price="2620"
+                data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-o_1M38RCtuQgmK-6Qwa-KvcXKxQPkrGrzQ&s">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-o_1M38RCtuQgmK-6Qwa-KvcXKxQPkrGrzQ&s"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Disgner Saree</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>2620</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Disgner Silk Saree" data-price="960"
+                data-src="https://textilemela.com/images/product/2022/09/royal-presents-rutba-vol-2-indian-women-designer-silk-saree-party-wedding-reception-bridal-wear-collection-3139-2022-09-13_11_51_29.jpeg">
+                <img src="https://textilemela.com/images/product/2022/09/royal-presents-rutba-vol-2-indian-women-designer-silk-saree-party-wedding-reception-bridal-wear-collection-3139-2022-09-13_11_51_29.jpeg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Disgner Silk Saree</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>960</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Kanchipuram Saree" data-price="1550"
+                data-src="https://rooprekha.com/cdn/shop/products/photo_2022-08-05_07-08-31.jpg?v=1680755739">
+                <img src="https://rooprekha.com/cdn/shop/products/photo_2022-08-05_07-08-31.jpg?v=1680755739"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Kanchipuram Saree</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1550</span>
+            </div>
+
+        </div>
+
+        <div class="row align-items-center justify-content-center mt-5 mx-2 gap-4">
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Kanchipuram Saree" data-price="2880"
+                data-src="https://mayilabel.com/cdn/shop/collections/Kanchi_Pattu_Saree_14_0f6dd4ed-a4f8-46b8-9639-ec91c78b9a79.jpg?v=1749304333&width=750">
+                <img src="https://mayilabel.com/cdn/shop/collections/Kanchi_Pattu_Saree_14_0f6dd4ed-a4f8-46b8-9639-ec91c78b9a79.jpg?v=1749304333&width=750"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Kanchipuram Saree</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>2880</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Silk Saree" data-price="1520"
+                data-src="https://www.karagiri.com/cdn/shop/products/silk-saree-navy-blue-silk-saree-silk-saree-online-32263483785409.jpg?v=1651235883">
+                <img src="https://www.karagiri.com/cdn/shop/products/silk-saree-navy-blue-silk-saree-silk-saree-online-32263483785409.jpg?v=1651235883"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Silk Saree</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1520</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Cotton Saree" data-price="640"
+                data-src="https://images.sagarimpex.net/766029_Shree%20Meera%20By%20Sr%20Fancy%20Daily%20Wear%20Cotton%20Saree%20Collection%201%20(16).jpeg">
+                <img src="https://images.sagarimpex.net/766029_Shree%20Meera%20By%20Sr%20Fancy%20Daily%20Wear%20Cotton%20Saree%20Collection%201%20(16).jpeg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Cotton Saree</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>640</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Kanchipuram Saree" data-price="3120"
+                data-src="https://lajreedesigner.com/cdn/shop/files/Shubh-SF-758_1_1200x1200.jpg?v=1745493381">
+                <img src="https://lajreedesigner.com/cdn/shop/files/Shubh-SF-758_1_1200x1200.jpg?v=1745493381"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Kanchipuram Saree</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>3120</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Handloom Cotton Saree" data-price="1799"
+                data-src="https://sutisancha.com/cdn/shop/files/Untitleddesign_30_a1b56dd6-d2ee-47eb-9f41-8c807c320048.jpg?v=1721900057">
+                <img src="https://sutisancha.com/cdn/shop/files/Untitleddesign_30_a1b56dd6-d2ee-47eb-9f41-8c807c320048.jpg?v=1721900057"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Handloom Cotton Saree</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1799</span>
+            </div>
+        </div>
+
+        <div class="row align-items-center justify-content-center mt-5 mx-2 gap-4">
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Disgner Saree" data-price="2950"
+                data-src="https://empress-clothing.com/cdn/shop/files/TT7010.jpg?v=1737630072">
+                <img src="https://empress-clothing.com/cdn/shop/files/TT7010.jpg?v=1737630072" class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Disgner Saree</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>2950</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Chinnon Silk Saree" data-price="570"
+                data-src="https://images.meesho.com/images/products/498481856/jrxfg_512.jpg">
+                <img src="https://images.meesho.com/images/products/498481856/jrxfg_512.jpg" class="imageSection" />
+                <span class="text-center fw-bold mt-3">Chinnon Silk Saree</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>570</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Floral Fusion Saree" data-price="3560"
+                data-src="https://www.bunaai.com/cdn/shop/products/indianwearonline-8803.jpg?v=1741246099">
+                <img src="https://www.bunaai.com/cdn/shop/products/indianwearonline-8803.jpg?v=1741246099"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Floral Fusion Saree</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>3560</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Silk Saree" data-price="1670"
+                data-src="https://assets2.andaazfashion.com/media/catalog/product/p/u/purple-saree-1-sarv0720.jpg">
+                <img src="https://assets2.andaazfashion.com/media/catalog/product/p/u/purple-saree-1-sarv0720.jpg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Silk Saree</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1670</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Cotton Saree" data-price="1240"
+                data-src="https://yourstore.io/api/uploads/5d30013a5c83a702392c4c8b/products/1751093695921-427144.webp">
+                <img src="https://yourstore.io/api/uploads/5d30013a5c83a702392c4c8b/products/1751093695921-427144.webp"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Cotton Saree</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1240</span>
+            </div>
+        </div>
+
+        <div class="row align-items-center justify-content-center mt-5 mx-2 gap-4">
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Designer Saree" data-price="2840"
+                data-src="https://5.imimg.com/data5/GH/FL/MY-24776718/saree-collection-in-low-price.jpeg">
+                <img src="https://5.imimg.com/data5/GH/FL/MY-24776718/saree-collection-in-low-price.jpeg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Designer Saree</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>2840</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Kanchipuram Saree" data-price="3690"
+                data-src="https://assets0.mirraw.com/images/11320577/image_zoom.jpeg?1678797610">
+                <img src="https://assets0.mirraw.com/images/11320577/image_zoom.jpeg?1678797610" class="imageSection" />
+                <span class="text-center fw-bold mt-3">Kanchipuram Saree</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>3690</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Embroidered Silk Saree" data-price="3670"
+                data-src="https://static.wixstatic.com/media/4594f8_0700d1fccce44db7b89092da9a299081~mv2.jpg/v1/fill/w_268,h_358,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4594f8_0700d1fccce44db7b89092da9a299081~mv2.jpg">
+                <img src="https://static.wixstatic.com/media/4594f8_0700d1fccce44db7b89092da9a299081~mv2.jpg/v1/fill/w_268,h_358,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4594f8_0700d1fccce44db7b89092da9a299081~mv2.jpg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Embroidered Silk Saree</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>3670</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Cotton Saree" data-price="880"
+                data-src="https://craftzone.in/backend/uploads/products/SKU0000000736/21fdb810a2dc0dd4a6d20af28f3fdfc6.webp">
+                <img src="https://craftzone.in/backend/uploads/products/SKU0000000736/21fdb810a2dc0dd4a6d20af28f3fdfc6.webp"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Cotton Saree</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>880</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Silk Saree" data-price="720"
+                data-src="https://www.karagiri.com/cdn/shop/products/silk-saree-navy-blue-silk-saree-silk-saree-online-32263483785409.jpg?v=1651235883">
+                <img src="https://www.karagiri.com/cdn/shop/products/silk-saree-navy-blue-silk-saree-silk-saree-online-32263483785409.jpg?v=1651235883"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Silk Saree</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>720</span>
+            </div>
+        </div>
+
+        <div class="container d-none mt-5" id="showMyDressContent">
+            <div class="row">
+                <div class="col-md-4">
+                    <img id="detailImage" class="img-fluid mb-3 dressImage" style="max-height: 400px;" />
+                    <h3 id="detailName"></h3>
+                    <h4 id="detailPrice" class="text-danger"></h4>
+                    <button class="btn btn-info mt-3 mx-2" onclick="addToCart()">Add To Cart</button>
+                    <button class="btn btn-info mt-3 mx-2" onclick="DirectTobuy()">Buy Now</button>
+                </div>
+                <div class="col-md-8">
+                    <h4>Women's Collections</h4>
+                    <span class="bg-success rounded-pill p-1 text-light">4 <i class="fa-solid fa-star"></i></span>
+                    <span class="text-muted">57,359 rating and 1962 reviews</span>
+
+
+                    <p class="fw-bold mt-5">Available Offers</p>
+                    <p>
+                        <span class="fw-bold">Bank offer 5%</span>
+                        cashback on Axis Bank Credit Card upto ₹4,000 per statement
+                    </p>
+
+                    <p>
+                        <span class="fw-bold">Bank offer 5%</span>
+                        cashback on Axis Bank Debit Card upto ₹750 per statement
+                    </p>
+
+                    <p>
+                        <span class="fw-bold">Bank offer 10%</span>
+                        off up to ₹1000 on ICICI Bank Credit Card Transactions, on orders of ₹1000
+                    </p>
+
+                    <p>
+                        <span class="fw-bold">Bank offer 10%</span>
+                        Up To ₹30 Instant Cashback on BHIM Payments App. Min Order Value ₹199. Offer Valid Once Per User
+                    </p>
+
+                    <p>
+                        <span class="fw-bold">Bank offer 10%</span>
+                        Flat ₹10 Instant Cashback on Paytm UPI Trxns. Min Order Value ₹500.
+                    </p>
+
+
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-info mt-3 " onclick="hideDetail()">Back to Products</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid d-none" id="cartItemList">
+        </div>
+
+
+        <div class="row justify-content-center">
+            <div class="col-6 d-none border border-danger" id="BuyNowBox"></div>
+        </div>
+
+        <div class="container-fluid d-none" id="WhishlistPage"></div>
+
+        <div class="container d-none" id="directlyGetItems"></div>
+
+    </main>
+
+
+    <div class="footer mt-5 bg-dark d-flex justify-content-center align-items-center py-4">
+        <div class="col-12 col-md-6 text-center">
+            <span class="text-primary">ABOUT US</span>
+            <p class="text-muted mt-4">
+                Our pure silk Kancheevaram sarees are directly from our own weavers...
+                Hand-picked threads are beautifully woven by talented artisans.
+                Mayura's custom-made designs are truly unique.
+            </p>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        // show dress details
+        let id = ''
+
+        function showDressDetails(event) {
+            const block = event.currentTarget
+            id = "MS" + Math.floor(Math.random() * 1000000)
+            const name = block.getAttribute('data-name')
+            const price = block.getAttribute('data-price')
+            const src = block.getAttribute('data-src')
+
+            document.getElementById('detailImage').src = src
+            document.getElementById('detailName').innerText = name
+            document.getElementById('detailPrice').innerHTML = `<i class="fa-solid fa-indian-rupee-sign"></i> ${price}`
+
+            document.querySelectorAll('.row.align-items-center.justify-content-center').forEach(row => row.classList.add('d-none'));
+            document.getElementById('showMyDressContent').classList.remove('d-none');
+        }
+
+
+        // back to main page(all dress page)
+        function hideDetail() {
+            document.querySelectorAll('.row.align-items-center.justify-content-center').forEach(row => row.classList.remove('d-none'))
+            document.getElementById('showMyDressContent').classList.add('d-none')
+        }
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            updateCartCount();
+        });
+
+
+        // add to my cart page
+        function addToCart() {
+
+            const item = {
+                currentDressId: id,
+                name: document.getElementById("detailName").textContent,
+                price: document.getElementById("detailPrice").textContent.replace("₹", ""),
+                src: document.getElementById("detailImage").getAttribute('src'),
+            }
+
+            let cart = JSON.parse(localStorage.getItem("cartItem")) || []
+
+
+            cart.push(item)
+
+            localStorage.setItem("cartItem", JSON.stringify(cart))
+            alert('Item add to cart')
+            updateCartCount();
+        }
+
+        // direct order Placed function
+        function DirectTobuy() {
+            document.getElementById('showMyDressContent').classList.add('d-none');
+            let directOrder = document.getElementById('directlyGetItems')
+            directOrder.classList.remove('d-none')
+
+            const item = {
+                currentDressId: id,
+                name: document.getElementById("detailName").textContent,
+                price: document.getElementById("detailPrice").textContent.replace("₹", ""),
+                src: document.getElementById("detailImage").getAttribute('src'),
+            };
+
+            localStorage.setItem("directBuyItem", JSON.stringify(item));
+
+            directOrder.innerHTML = `
+                <h3>${item.name}</h3>
+                <img src="${item.src}" style="max-width:200px;"/>
+                <p>Price: ₹${item.price}</p>
+                <button class="btn btn-success mt-3" onclick="DirectConfirmOrder(event,'${item.currentDressId}')">Confirm Order</button>
+    `;
+        }
+
+
+
+        window.DirectConfirmOrder = function (e, id) {
+
+            e.preventDefault()
+
+            const buyBox = document.getElementById('BuyNowBox')
+            buyBox.classList.remove('d-none')
+
+            alert('Your order has confirmed')
+
+            let orders = JSON.parse(localStorage.getItem("orders")) || [];
+            let users = JSON.parse(localStorage.getItem('currentUser')) || {};
+            let item = JSON.parse(localStorage.getItem("directBuyItem")) || {};
+
+
+            let deliverDate = new Date()
+            deliverDate.setDate(deliverDate.getDate() + 7)
+            orders.push({
+                ...item,
+                orderDate: new Date().toLocaleString(),
+                deliverDate: deliverDate.toLocaleDateString(),
+                customerName: users?.usrFullName,
+                customerAddress: users?.usrAddress,
+                customerMobile: users?.usrMobile
+            });
+
+            localStorage.setItem("orders", JSON.stringify(orders));
+            localStorage.removeItem("directBuyItem");
+
+            setTimeout(() => location.reload(), 1000)
+
+            buyBox.innerHTML = `
+                        <div class='d-flex justify-content-center flex-column'>
+                         <img src='https://icons.veryicon.com/png/o/miscellaneous/real-estate-project-related/confirm-27.png' alt='confirmOrder' style="width:60px;height:150px"/>
+                         <h3 class=text-center>Order Confirmed</h3>
+                        </div>
+                    `
+        }
+
+
+
+        // myCart page
+        function showMyCart() {
+
+            document.querySelectorAll('.row.align-items-center.justify-content-center')
+                .forEach(row => row.classList.add('d-none'));
+
+            const cartUI = document.getElementById('cartItemList');
+
+            cartUI.classList.remove('d-none');
+            cartUI.classList.add('d-block');
+
+            document.getElementById('showMyDressContent').classList.add('d-none');
+
+            const showCartArea = document.getElementById("cartItemList");
+
+            const cart = JSON.parse(localStorage.getItem("cartItem")) || []
+
+            if (cart.length === 0) {
+                showCartArea.innerHTML = `
+                         <ul class="list-group">
+                            <li class="list-group-item">Your Cart Is Empty</li>
+                        </ul>
+                        `
+                return
+            }
+
+
+
+            let cartHTML = '<ul class="list-group">';
+            cart.forEach((item, index) => {
+                cartHTML += `
+                <li class="list-group-item">
+                    <div class=" d-flex align-items-start">
+                        <div class="me-3 text-center">
+                            <img src="${item.src}" class="card-img-top" alt="${item.name}" style="max-width: 150px; height: auto;"/>
+
+                    
+                            <div class="d-flex flex-row gap-5 w-100">
+                                <div class="d-flex flex-row border border-danger justify-content-between bg-success">
+                                    <button class="btn btn-sm text-light" style="font-size: 24px;" onclick="decreaseItem(event)">-</button>
+                                    <p class="fw-bold text-light mb-0 mt-2 countItem">1</p>
+                                    <button class="btn btn-sm text-light" style="font-size: 24px;" onclick="IncreaseItem(event)">+</button>
+                                </div>
+
+                                <button type="button" onclick="buyItems(event,'${item.currentDressId}')" class='btn btn-success w-100'>Buy Now</button>
+                            </div>
+                        </div>
+
+
+                    <div class="d-flex flex-row justify-content-between w-100">
+                        <div>
+                            <strong>${item.name}</strong><br/>
+                            <p id="itemCost"><strong>Price: </strong>${item.price}</p>
+                        </div>
+
+                        <div class="text-end">
+                            <span style="font-size: 30px;cursor:pointer" onclick="removeFromCart(event,'${item.currentDressId}')">&times;</span>
+                        </div>
+                    </div>
+                    </div>
+                </li>
+            `;
+            });
+            cartHTML += '</ul>';
+
+
+            showCartArea.innerHTML = cartHTML;
+
+
+            updateCartCount();
+        }
+
+
+        // first box of buybox container
+        window.buyItems = function (e, id) {
+            e.preventDefault()
+
+            const cartUI = document.getElementById('cartItemList');
+            cartUI.style.filter = "blur(5px)";
+            const buyBox = document.getElementById('BuyNowBox')
+            buyBox.classList.remove('d-none')
+
+            const cart = JSON.parse(localStorage.getItem("cartItem")) || []
+            const users = JSON.parse(localStorage.getItem('currentUser')) || {};
+
+
+            const matchId = cart.find(MSItem => MSItem.currentDressId === id)
+
+
+            if (matchId && users) {
+                buyBox.innerHTML = `
+                        <div>
+                            <strong>${matchId.name}</strong><br/>
+                            <br/>
+                            <p id="itemCost"><strong>Price: </strong>${matchId.price}</p>
+                            
+                        </div>
+                        
+                        <div class="d-flex flex-row gap-5">
+                            <button type="button" class='btn btn-success w-50' onclick='BackToMyCart(event)'>Cancel Item</button>
+                            <button type="button" class='btn btn-success w-50' onclick='showNxtBuyBox(event,"${users.usrFullName}", "${users.usrAddress}", "${users.usrMobile}")'>Next</button>    
+                        </div>
+                    `
+            }
+
+        }
+
+
+        // second page of buyBox container
+        window.showNxtBuyBox = function (e) {
+            e.preventDefault()
+
+            const buyBox = document.getElementById('BuyNowBox')
+            buyBox.classList.remove('d-none')
+
+            let users = JSON.parse(localStorage.getItem('currentUser')) || {};
+            const cart = JSON.parse(localStorage.getItem("cartItem")) || []
+
+
+            if (users.length === 0) {
+                alert("No registered users found");
+                return;
+            }
+
+
+            buyBox.innerHTML = `
+                        <div>
+                            <p><strong>Name:</strong>${users.usrFullName}</p>
+                            <br/>
+                            <p id="itemCost"><strong>Address: </strong>${users.usrAddress}</p>
+                            <br/>
+                            <p><strong>Mobile: </strong>${users.usrMobile}</p>
+                        </div>
+
+                         <div class="d-flex flex-row justify-content-center mt-5">
+                            <button type="button" class='btn btn-success w-50' onclick='OrderMyItems(event,"${cart[0]?.currentDressId}")'>Order Item</button>
+                        </div>
+             `
+        }
+
+        // final order confirm box in buybox container
+        window.OrderMyItems = function (e, id) {
+
+            e.preventDefault()
+
+            const buyBox = document.getElementById('BuyNowBox')
+            buyBox.classList.remove('d-none')
+
+            alert('Your order has confirmed')
+
+
+            let cart = JSON.parse(localStorage.getItem("cartItem")) || []
+            let orders = JSON.parse(localStorage.getItem("orders")) || [];
+            let users = JSON.parse(localStorage.getItem('currentUser')) || {};
+
+
+            let orderedItem = cart.find(item => item.currentDressId === id);
+
+            if (orderedItem) {
+                let deliverDate = new Date()
+                deliverDate.setDate(deliverDate.getDate() + 7)
+                orders.push({
+                    ...orderedItem,
+                    orderDate: new Date().toLocaleString(),
+                    deliverDate: deliverDate.toLocaleDateString(),
+                    customerName: users?.usrFullName,
+                    customerAddress: users?.usrAddress,
+                    customerMobile: users?.usrMobile
+                });
+            }
+
+            let Newcart = cart.filter(item => item.currentDressId !== id);
+
+            localStorage.setItem("cartItem", JSON.stringify(Newcart));
+            localStorage.setItem("orders", JSON.stringify(orders));
+
+            document.getElementById("cartCount").innerText = Newcart.length;
+
+            setTimeout(() => location.reload(), 1000)
+
+            buyBox.innerHTML = `
+                        <div class='d-flex justify-content-center flex-column'>
+                         <img src='https://icons.veryicon.com/png/o/miscellaneous/real-estate-project-related/confirm-27.png' alt='confirmOrder' style="width:60px;height:150px"/>
+                         <h3 class=text-center>Order Confirmed</h3>
+                        </div>
+                    `
+
+        }
+
+
+        // cancel button in buyBox container
+        window.BackToMyCart = function (e) {
+            e.preventDefault()
+            const buyBox = document.getElementById('BuyNowBox')
+            buyBox.classList.add('d-none')
+
+            const cartUI = document.getElementById('cartItemList');
+            cartUI.style.filter = "blur(0px)";
+
+            location.reload();
+        }
+
+
+        // IncreaseItem function for myCartPage
+        window.IncreaseItem = function (e) {
+            e.preventDefault();
+            const countElement = e.target.closest(".d-flex").querySelector(".countItem");
+            let count = parseInt(countElement.textContent, 10) || 0;
+            countElement.textContent = count + 1;
+        }
+
+
+        // decreaseItem function for myCartPage
+        window.decreaseItem = function (e) {
+            e.preventDefault();
+            const countElement = e.target.closest(".d-flex").querySelector(".countItem");
+            let count = parseInt(countElement.textContent, 10) || 0;
+            if (count > 1) {
+                countElement.textContent = count - 1;
+            }
+        }
+
+
+        // myCart Notification Count
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem("cartItem")) || [];
+            document.getElementById("cartCount").innerText = cart.length;
+        }
+
+
+        function removeFromCart(e, id) {
+            e.preventDefault()
+            let cart = JSON.parse(localStorage.getItem("cartItem")) || [];
+            cart = cart.filter(itm => itm.currentDressId !== id)
+            localStorage.setItem("cartItem", JSON.stringify(cart));
+            updateCartCount();
+            showMyCart();
+        }
+
+    </script>
+</body>
+
+</html>

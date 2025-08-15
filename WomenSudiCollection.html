@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="practice1.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>MayuraSilks</title>
+    <script>
+
+
+        function backToHome() {
+
+            window.location.href = 'CustomerPage.html'
+        }
+
+
+        // Logout funtion
+        function userLogout() {
+            window.location.href = "UserLogin.html"
+        }
+
+        function GoToOderPage() {
+            window.location.href = 'MyOrderPage.html'
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="fluid-container name-header">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+
+                <div class="col-md-3 col-12 mb-2 d-flex flex-md-row flex-column justify-content-md-end">
+                    <img src="https://www.pngplay.com/wp-content/uploads/12/Peacock-PNG-Pic-Background.png"
+                        class="peacockLogo" />
+                    <h1 class="text-success brand">MayuRa</h1>
+                    <p class="text-danger subBrand">Silks</p>
+                </div>
+
+                <div class="col-md-4 col-12 mb-2">
+                    <form action="">
+                        <input type="search" class="form-control" id="Dsearch" placeholder="Search here!" />
+                    </form>
+                </div>
+                <div
+                    class=" col-md-5 col-12 insideNav d-flex flex-column flex-md-row justify-content-md-end align-items-center text-center gap-3">
+                    <span onclick="GoToOderPage()"><i class="fa-solid fa-heart mx-1"></i>My Orders</span>
+
+                    <button type="button" onclick="showMyCart()"
+                        class="btn position-relative d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-cart-shopping fs-5"></i>
+                        <span>My Cart</span>
+                        <span id="cartCount"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                        </span>
+                    </button>
+
+                    <span onclick="userLogout()"><i class="fa-solid fa-unlock mx-1"></i> Logout</span>
+                    <span onclick="backToHome()"><i class="fa-solid fa-house"></i> Home</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <div class="row align-items-center justify-content-center mt-5 mx-2 gap-4">
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Visco Rayan Kurti" data-price="780"
+                data-src="https://i.pinimg.com/474x/30/36/dd/3036ddabf0c0ed2ede810b04987a76c0.jpg">
+
+                <img src="https://i.pinimg.com/474x/30/36/dd/3036ddabf0c0ed2ede810b04987a76c0.jpg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Visco Rayan Kurti</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>780</span>
+
+            </div>
+
+            <div class="col-12 col-md-2 d-flex align-items-center justify-content-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Silk Blend Kurti" data-price="460"
+                data-src="https://i.pinimg.com/originals/4a/76/06/4a7606cb5a88bf46ffb60d001625a4e3.jpg">
+
+                <img src="https://i.pinimg.com/originals/4a/76/06/4a7606cb5a88bf46ffb60d001625a4e3.jpg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Silk Blend Kurti</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>460</span>
+
+            </div>
+
+            <div class="col-12 col-md-2 d-flex align-items-center justify-content-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Cotton Rayan Kurtha" data-price="620"
+                data-src="https://firsthub.in/public/uploads/all/jkucc0gZXOxOIogtFqRp57fvqUCu7cUys0Z3ENta.webp">
+                <img src="https://firsthub.in/public/uploads/all/jkucc0gZXOxOIogtFqRp57fvqUCu7cUys0Z3ENta.webp"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Cotton Rayan Kurtha</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>620</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Silk Blend Kurtha" data-price="948"
+                data-src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/2025/MAY/13/2NZI1mxR_0d5d636ada0e459e9c29d8718c4ed7b0.jpg">
+                <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/2025/MAY/13/2NZI1mxR_0d5d636ada0e459e9c29d8718c4ed7b0.jpg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Silk Blend Kurtha</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>948</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Printed Kurtha" data-price="550"
+                data-src="https://i0.wp.com/youmeandtrends.com/wp-content/uploads/2016/01/salwar-kameez-suit-neck-designs-images.jpg">
+                <img src="https://i0.wp.com/youmeandtrends.com/wp-content/uploads/2016/01/salwar-kameez-suit-neck-designs-images.jpg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Printed Kurtha</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>550</span>
+            </div>
+
+        </div>
+
+        <div class="row align-items-center justify-content-center mt-5 mx-2 gap-4">
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Georgette Kurtha" data-price="880"
+                data-src="https://4.imimg.com/data4/UL/HG/MY-27982302/30008c-500x500.jpg">
+                <img src="https://4.imimg.com/data4/UL/HG/MY-27982302/30008c-500x500.jpg" class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Georgette Kurtha</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>880</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Cotton Rayan Kurtha" data-price="520"
+                data-src="https://5.imimg.com/data5/SELLER/Default/2022/8/YR/NG/EY/111060433/designer-churidars-tops-500x500.jpg">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2022/8/YR/NG/EY/111060433/designer-churidars-tops-500x500.jpg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Cotton Rayan Kurtha</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>520</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Cotton Blend Kurtha" data-price="640"
+                data-src="https://images.meesho.com/images/products/389975667/g5whb_512.jpg">
+                <img src="https://images.meesho.com/images/products/389975667/g5whb_512.jpg" class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Cotton Blend Kurtha</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>640</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Silk Cotton Kurtha" data-price="1120"
+                data-src="https://urbanjaipur.com/wp-content/uploads/2023/05/sahara-style.jpg">
+                <img src="https://urbanjaipur.com/wp-content/uploads/2023/05/sahara-style.jpg" class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Silk Cotton Kurtha</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1120</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Floral Print Kurtha" data-price="799"
+                data-src="https://img.perniaspopupshop.com/catalog/product/a/y/AYMC022114_1.jpg">
+                <img src="https://img.perniaspopupshop.com/catalog/product/a/y/AYMC022114_1.jpg" class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Floral Print Kurtha</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>799</span>
+            </div>
+        </div>
+
+        <div class="row align-items-center justify-content-center mt-5 mx-2 gap-4">
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Silk Cotton Kurtha" data-price="950"
+                data-src="https://3.imimg.com/data3/UU/FB/MY-10369817/chudidar-salwar-suit-500x500.jpg">
+                <img src="https://3.imimg.com/data3/UU/FB/MY-10369817/chudidar-salwar-suit-500x500.jpg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Silk Cotton Kurtha</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>950</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Party Wear Kurtha" data-price="1570"
+                data-src="https://assets0.mirraw.com/images/12313812/image_long_webp.webp?1709646093">
+                <img src="https://assets0.mirraw.com/images/12313812/image_long_webp.webp?1709646093"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Party Wear Kurtha</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1570</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Cotton Set" data-price="560"
+                data-src="https://stylesatlife.com/wp-content/uploads/2018/02/Yellow-and-Green-Combination-salwar-Suit.jpg">
+                <img src="https://stylesatlife.com/wp-content/uploads/2018/02/Yellow-and-Green-Combination-salwar-Suit.jpg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Cotton Set</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>560</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Cotton Set" data-price="670"
+                data-src="https://juniperfashion.com/cdn/shop/files/P1102Mustard_4.jpg?v=1743491961&width=2000">
+                <img src="https://juniperfashion.com/cdn/shop/files/P1102Mustard_4.jpg?v=1743491961&width=2000"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Cotton Set</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>670</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Cotton Blend Midi" data-price="1240"
+                data-src="https://maybellindia.com/cdn/shop/files/AKT_eeebf490-ce8b-4397-bed3-204f091d32bd.png?v=1743168140&width=720">
+                <img src="https://maybellindia.com/cdn/shop/files/AKT_eeebf490-ce8b-4397-bed3-204f091d32bd.png?v=1743168140&width=720"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Cotton Blend Midi</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1240</span>
+            </div>
+        </div>
+
+        <div class="row align-items-center justify-content-center mt-5 mx-2 gap-4">
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Cotton Kurtha" data-price="840"
+                data-src="https://maybellindia.com/cdn/shop/files/SKD19130424.jpg?v=1754040205">
+                <img src="https://maybellindia.com/cdn/shop/files/SKD19130424.jpg?v=1754040205" class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Cotton Kurtha</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>840</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Printed Kurtha" data-price="690"
+                data-src="https://rmkv.com/cdn/shop/files/C3P40111-1-1-8249_1370x.webp?v=1747723787">
+                <img src="https://rmkv.com/cdn/shop/files/C3P40111-1-1-8249_1370x.webp?v=1747723787"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Printed Kurtha</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>690</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Visco Rayan Kurti" data-price="1670"
+                data-src="https://i.pinimg.com/474x/96/71/d5/9671d5cb7fdefd528caad18b27fad7b9.jpg">
+                <img src="https://i.pinimg.com/474x/96/71/d5/9671d5cb7fdefd528caad18b27fad7b9.jpg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Visco Rayan Kurti</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1670</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Cotton Blend Kurtha" data-price="880"
+                data-src="https://urbanjaipur.com/wp-content/uploads/2023/05/straight-cut-salwar-suit.jpg">
+                <img src="https://urbanjaipur.com/wp-content/uploads/2023/05/straight-cut-salwar-suit.jpg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Cotton Blend Kurtha</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>880</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Silk Cotton Kurtha" data-price="720"
+                data-src="https://i.pinimg.com/564x/59/5e/91/595e91d71939331f1988aba76a262fe3.jpg">
+                <img src="https://i.pinimg.com/564x/59/5e/91/595e91d71939331f1988aba76a262fe3.jpg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Silk Cotton Kurtha</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>720</span>
+            </div>
+        </div>
+
+        <div class="container d-none mt-5" id="showMyDressContent">
+            <div class="row">
+                <div class="col-md-4">
+                    <img id="detailImage" class="img-fluid mb-3 dressImage" style="max-height: 400px;" />
+                    <h3 id="detailName"></h3>
+                    <h4 id="detailPrice" class="text-danger"></h4>
+                    <button class="btn btn-info mt-3 mx-2" onclick="addToCart()">Add To Cart</button>
+                    <button class="btn btn-info mt-3 mx-2" onclick="DirectTobuy()">Buy Now</button>
+                </div>
+                <div class="col-md-8">
+                    <h4>Women's Collections</h4>
+                    <span class="bg-success rounded-pill p-1 text-light">4 <i class="fa-solid fa-star"></i></span>
+                    <span class="text-muted">57,359 rating and 1962 reviews</span>
+                    <p class="mt-5" style="cursor: pointer;">Size
+                        <span class="fw-bold border border-danger p-2 mx-2 size-option">XS</span>
+                        <span class="fw-bold border border-danger p-2 mx-2 size-option">S</span>
+                        <span class="fw-bold border border-danger p-2 mx-2 size-option">M</span>
+                        <span class="fw-bold border border-danger p-2 mx-2 size-option">L</span>
+                        <span class="fw-bold border border-danger p-2 mx-2 size-option">XL</span>
+                        <span class="fw-bold border border-danger p-2 mx-2 size-option">XXL</span>
+                    </p>
+
+                    <p class="fw-bold mt-5">Available Offers</p>
+                    <p>
+                        <span class="fw-bold">Bank offer 5%</span>
+                        cashback on Axis Bank Credit Card upto ₹4,000 per statement
+                    </p>
+
+                    <p>
+                        <span class="fw-bold">Bank offer 5%</span>
+                        cashback on Axis Bank Debit Card upto ₹750 per statement
+                    </p>
+
+                    <p>
+                        <span class="fw-bold">Bank offer 10%</span>
+                        off up to ₹1000 on ICICI Bank Credit Card Transactions, on orders of ₹1000
+                    </p>
+
+                    <p>
+                        <span class="fw-bold">Bank offer 10%</span>
+                        Up To ₹30 Instant Cashback on BHIM Payments App. Min Order Value ₹199. Offer Valid Once Per User
+                    </p>
+
+                    <p>
+                        <span class="fw-bold">Bank offer 10%</span>
+                        Flat ₹10 Instant Cashback on Paytm UPI Trxns. Min Order Value ₹500.
+                    </p>
+
+
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-info mt-3 " onclick="hideDetail()">Back to Products</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid d-none" id="cartItemList">
+        </div>
+
+
+        <div class="row justify-content-center">
+            <div class="col-6 d-none border border-danger" id="BuyNowBox"></div>
+        </div>
+
+        <div class="container-fluid d-none" id="WhishlistPage"></div>
+
+        <div class="container d-none" id="directlyGetItems"></div>
+
+    </main>
+
+
+    <div class="footer mt-5 bg-dark d-flex justify-content-center align-items-center py-4">
+        <div class="col-12 col-md-6 text-center">
+            <span class="text-primary">ABOUT US</span>
+            <p class="text-muted mt-4">
+                Our pure silk Kancheevaram sarees are directly from our own weavers...
+                Hand-picked threads are beautifully woven by talented artisans.
+                Mayura's custom-made designs are truly unique.
+            </p>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        // show dress details
+        let id = ''
+
+        function showDressDetails(event) {
+            const block = event.currentTarget
+            id = "MS" + Math.floor(Math.random() * 1000000)
+            const name = block.getAttribute('data-name')
+            const price = block.getAttribute('data-price')
+            const src = block.getAttribute('data-src')
+
+            document.getElementById('detailImage').src = src
+            document.getElementById('detailName').innerText = name
+            document.getElementById('detailPrice').innerHTML = `<i class="fa-solid fa-indian-rupee-sign"></i> ${price}`
+
+            document.querySelectorAll('.row.align-items-center.justify-content-center').forEach(row => row.classList.add('d-none'));
+            document.getElementById('showMyDressContent').classList.remove('d-none');
+        }
+
+
+        // back to main page(all dress page)
+        function hideDetail() {
+            document.querySelectorAll('.row.align-items-center.justify-content-center').forEach(row => row.classList.remove('d-none'))
+            document.getElementById('showMyDressContent').classList.add('d-none')
+        }
+
+
+
+        // size slector function
+        let selectedSize = ""
+
+        document.querySelectorAll('.size-option').forEach(span => {
+            span.addEventListener('click', () => {
+                document.querySelectorAll('.size-option').forEach(s => s.classList.remove('bg-danger', 'text-white'))
+                span.classList.add('bg-danger', 'text-white')
+                selectedSize = span.textContent.trim()
+            })
+        })
+
+        document.addEventListener("DOMContentLoaded", () => {
+            updateCartCount();
+        });
+
+
+        // add to my cart page
+        function addToCart() {
+            if (!selectedSize) {
+                alert("Please select a size before adding to cart.")
+                return
+            }
+            const item = {
+                currentDressId: id,
+                name: document.getElementById("detailName").textContent,
+                price: document.getElementById("detailPrice").textContent.replace("₹", ""),
+                src: document.getElementById("detailImage").getAttribute('src'),
+                size: selectedSize
+            }
+
+            let cart = JSON.parse(localStorage.getItem("cartItem")) || []
+
+
+            cart.push(item)
+
+            localStorage.setItem("cartItem", JSON.stringify(cart))
+            alert('Item add to cart')
+            updateCartCount();
+        }
+
+
+
+        // direct order Placed function
+        function DirectTobuy() {
+            if (!selectedSize) {
+                alert("Please select a size before adding to cart.")
+                return
+            }
+
+            document.getElementById('showMyDressContent').classList.add('d-none');
+            let directOrder = document.getElementById('directlyGetItems')
+            directOrder.classList.remove('d-none')
+
+            const item = {
+                currentDressId: id,
+                name: document.getElementById("detailName").textContent,
+                price: document.getElementById("detailPrice").textContent.replace("₹", ""),
+                src: document.getElementById("detailImage").getAttribute('src'),
+            };
+
+            localStorage.setItem("directBuyItem", JSON.stringify(item));
+
+            directOrder.innerHTML = `
+                <h3>${item.name}</h3>
+                <img src="${item.src}" style="max-width:200px;"/>
+                <p>Price: ₹${item.price}</p>
+                <button class="btn btn-success mt-3" onclick="DirectConfirmOrder(event,'${item.currentDressId}')">Confirm Order</button>
+    `;
+        }
+
+
+
+        window.DirectConfirmOrder = function (e, id) {
+
+            e.preventDefault()
+
+            const buyBox = document.getElementById('BuyNowBox')
+            buyBox.classList.remove('d-none')
+
+            alert('Your order has confirmed')
+
+            let orders = JSON.parse(localStorage.getItem("orders")) || [];
+            let users = JSON.parse(localStorage.getItem('currentUser')) || {};
+            let item = JSON.parse(localStorage.getItem("directBuyItem")) || {};
+
+
+            let deliverDate = new Date()
+            deliverDate.setDate(deliverDate.getDate() + 7)
+            orders.push({
+                ...item,
+                orderDate: new Date().toLocaleString(),
+                deliverDate: deliverDate.toLocaleDateString(),
+                customerName: users?.usrFullName,
+                customerAddress: users?.usrAddress,
+                customerMobile: users?.usrMobile
+            });
+
+            localStorage.setItem("orders", JSON.stringify(orders));
+            localStorage.removeItem("directBuyItem");
+
+            setTimeout(() => location.reload(), 1000)
+
+            buyBox.innerHTML = `
+                        <div class='d-flex justify-content-center flex-column'>
+                         <img src='https://icons.veryicon.com/png/o/miscellaneous/real-estate-project-related/confirm-27.png' alt='confirmOrder' style="width:60px;height:150px"/>
+                         <h3 class=text-center>Order Confirmed</h3>
+                        </div>
+                    `
+        }
+
+
+
+
+        // myCart page
+        function showMyCart() {
+
+            document.querySelectorAll('.row.align-items-center.justify-content-center')
+                .forEach(row => row.classList.add('d-none'));
+
+            const cartUI = document.getElementById('cartItemList');
+
+            cartUI.classList.remove('d-none');
+            cartUI.classList.add('d-block');
+
+            document.getElementById('showMyDressContent').classList.add('d-none');
+
+            const showCartArea = document.getElementById("cartItemList");
+
+            const cart = JSON.parse(localStorage.getItem("cartItem")) || []
+
+            if (cart.length === 0) {
+                showCartArea.innerHTML = `
+                         <ul class="list-group">
+                            <li class="list-group-item">Your Cart Is Empty</li>
+                        </ul>
+                        `
+                return
+            }
+
+
+
+            let cartHTML = '<ul class="list-group">';
+            cart.forEach((item, index) => {
+                cartHTML += `
+                <li class="list-group-item">
+                    <div class=" d-flex align-items-start">
+                        <div class="me-3 text-center">
+                            <img src="${item.src}" class="card-img-top" alt="${item.name}" style="max-width: 150px; height: auto;"/>
+
+                    
+                            <div class="d-flex flex-row gap-5 w-100">
+                                <div class="d-flex flex-row border border-danger justify-content-between bg-success">
+                                    <button class="btn btn-sm text-light" style="font-size: 24px;" onclick="decreaseItem(event)">-</button>
+                                    <p class="fw-bold text-light mb-0 mt-2 countItem">1</p>
+                                    <button class="btn btn-sm text-light" style="font-size: 24px;" onclick="IncreaseItem(event)">+</button>
+                                </div>
+
+                                <button type="button" onclick="buyItems(event,'${item.currentDressId}')" class='btn btn-success w-100'>Buy Now</button>
+                            </div>
+                        </div>
+
+
+                    <div class="d-flex flex-row justify-content-between w-100">
+                        <div>
+                            <strong>${item.name}</strong><br/>
+                            <p id="itemCost"><strong>Price: </strong>${item.price}</p>
+                            <p><strong>size: </strong>${item.size}</p>
+                        </div>
+
+                        <div class="text-end">
+                            <span style="font-size: 30px;cursor:pointer" onclick="removeFromCart(event,'${item.currentDressId}')">&times;</span>
+                        </div>
+                    </div>
+                    </div>
+                </li>
+            `;
+            });
+            cartHTML += '</ul>';
+
+
+            showCartArea.innerHTML = cartHTML;
+
+
+            updateCartCount();
+        }
+
+
+        // first box of buybox container
+        window.buyItems = function (e, id) {
+            e.preventDefault()
+
+            const cartUI = document.getElementById('cartItemList');
+            cartUI.style.filter = "blur(5px)";
+            const buyBox = document.getElementById('BuyNowBox')
+            buyBox.classList.remove('d-none')
+
+            const cart = JSON.parse(localStorage.getItem("cartItem")) || []
+            const users = JSON.parse(localStorage.getItem('currentUser')) || {};
+
+
+            const matchId = cart.find(MSItem => MSItem.currentDressId === id)
+
+
+            if (matchId && users) {
+                buyBox.innerHTML = `
+                        <div>
+                            <strong>${matchId.name}</strong><br/>
+                            <br/>
+                            <p id="itemCost"><strong>Price: </strong>${matchId.price}</p>
+                            <p><strong>size: </strong>${matchId.size}</p>
+                        </div>
+                        
+                        <div class="d-flex flex-row gap-5">
+                            <button type="button" class='btn btn-success w-50' onclick='BackToMyCart(event)'>Cancel Item</button>
+                            <button type="button" class='btn btn-success w-50' onclick='showNxtBuyBox(event,"${users.usrFullName}", "${users.usrAddress}", "${users.usrMobile}")'>Next</button>    
+                        </div>
+                    `
+            }
+
+        }
+
+
+        // second page of buyBox container
+        window.showNxtBuyBox = function (e) {
+            e.preventDefault()
+
+            const buyBox = document.getElementById('BuyNowBox')
+            buyBox.classList.remove('d-none')
+
+            let users = JSON.parse(localStorage.getItem('currentUser')) || {};
+            const cart = JSON.parse(localStorage.getItem("cartItem")) || []
+
+
+            if (users.length === 0) {
+                alert("No registered users found");
+                return;
+            }
+
+
+            buyBox.innerHTML = `
+                        <div>
+                            <p><strong>Name:</strong>${users.usrFullName}</p>
+                            <br/>
+                            <p id="itemCost"><strong>Address: </strong>${users.usrAddress}</p>
+                            <br/>
+                            <p><strong>Mobile: </strong>${users.usrMobile}</p>
+                        </div>
+
+                         <div class="d-flex flex-row justify-content-center mt-5">
+                            <button type="button" class='btn btn-success w-50' onclick='OrderMyItems(event,"${cart[0]?.currentDressId}")'>Order Item</button>
+                        </div>
+             `
+        }
+
+        // final order confirm box in buybox container
+        window.OrderMyItems = function (e, id) {
+
+            e.preventDefault()
+
+            const buyBox = document.getElementById('BuyNowBox')
+            buyBox.classList.remove('d-none')
+
+            alert('Your order has confirmed')
+
+
+            let cart = JSON.parse(localStorage.getItem("cartItem")) || []
+            let orders = JSON.parse(localStorage.getItem("orders")) || [];
+            let users = JSON.parse(localStorage.getItem('currentUser')) || {};
+
+
+            let orderedItem = cart.find(item => item.currentDressId === id);
+
+            if (orderedItem) {
+                let deliverDate = new Date()
+                deliverDate.setDate(deliverDate.getDate() + 7)
+                orders.push({
+                    ...orderedItem,
+                    orderDate: new Date().toLocaleString(),
+                    deliverDate: deliverDate.toLocaleDateString(),
+                    customerName: users?.usrFullName,
+                    customerAddress: users?.usrAddress,
+                    customerMobile: users?.usrMobile
+                });
+            }
+
+            let Newcart = cart.filter(item => item.currentDressId !== id);
+
+            localStorage.setItem("cartItem", JSON.stringify(Newcart));
+            localStorage.setItem("orders", JSON.stringify(orders));
+
+            document.getElementById("cartCount").innerText = Newcart.length;
+
+            setTimeout(() => location.reload(), 1000)
+
+            buyBox.innerHTML = `
+                        <div class='d-flex justify-content-center flex-column'>
+                         <img src='https://icons.veryicon.com/png/o/miscellaneous/real-estate-project-related/confirm-27.png' alt='confirmOrder' style="width:60px;height:150px"/>
+                         <h3 class=text-center>Order Confirmed</h3>
+                        </div>
+                    `
+
+        }
+
+
+        // cancel button in buyBox container
+        window.BackToMyCart = function (e) {
+            e.preventDefault()
+            const buyBox = document.getElementById('BuyNowBox')
+            buyBox.classList.add('d-none')
+
+            const cartUI = document.getElementById('cartItemList');
+            cartUI.style.filter = "blur(0px)";
+
+            location.reload();
+        }
+
+
+        // IncreaseItem function for myCartPage
+        window.IncreaseItem = function (e) {
+            e.preventDefault();
+            const countElement = e.target.closest(".d-flex").querySelector(".countItem");
+            let count = parseInt(countElement.textContent, 10) || 0;
+            countElement.textContent = count + 1;
+        }
+
+
+        // decreaseItem function for myCartPage
+        window.decreaseItem = function (e) {
+            e.preventDefault();
+            const countElement = e.target.closest(".d-flex").querySelector(".countItem");
+            let count = parseInt(countElement.textContent, 10) || 0;
+            if (count > 1) {
+                countElement.textContent = count - 1;
+            }
+        }
+
+
+        // myCart Notification Count
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem("cartItem")) || [];
+            document.getElementById("cartCount").innerText = cart.length;
+        }
+
+
+        function removeFromCart(e, id) {
+            e.preventDefault()
+            let cart = JSON.parse(localStorage.getItem("cartItem")) || [];
+            cart = cart.filter(itm => itm.currentDressId !== id)
+            localStorage.setItem("cartItem", JSON.stringify(cart));
+            updateCartCount();
+            showMyCart();
+        }
+
+    </script>
+</body>
+
+</html>

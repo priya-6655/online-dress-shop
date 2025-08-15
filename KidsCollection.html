@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="practice1.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>MayuraSilks</title>
+    <script>
+
+
+        function backToHome() {
+
+            window.location.href = 'CustomerPage.html'
+        }
+
+
+        // Logout funtion
+        function userLogout() {
+            window.location.href = "UserLogin.html"
+        }
+
+        function GoToOderPage() {
+            window.location.href = 'MyOrderPage.html'
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="fluid-container name-header">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+
+                <div class="col-md-3 col-12 mb-2 d-flex flex-md-row flex-column justify-content-md-end">
+                    <img src="https://www.pngplay.com/wp-content/uploads/12/Peacock-PNG-Pic-Background.png"
+                        class="peacockLogo" />
+                    <h1 class="text-success brand">MayuRa</h1>
+                    <p class="text-danger subBrand">Silks</p>
+                </div>
+
+                <div class="col-md-4 col-12 mb-2">
+                    <form action="">
+                        <input type="search" class="form-control" id="Dsearch" placeholder="Search here!" />
+                    </form>
+                </div>
+                <div
+                    class=" col-md-5 col-12 insideNav d-flex flex-column flex-md-row justify-content-md-end align-items-center text-center gap-3">
+                    <span onclick="GoToOderPage()"><i class="fa-solid fa-heart mx-1"></i>My Orders</span>
+
+                    <button type="button" onclick="showMyCart()"
+                        class="btn position-relative d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-cart-shopping fs-5"></i>
+                        <span>My Cart</span>
+                        <span id="cartCount"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                        </span>
+                    </button>
+
+                    <span onclick="userLogout()"><i class="fa-solid fa-unlock mx-1"></i> Logout</span>
+                    <span onclick="backToHome()"><i class="fa-solid fa-house"></i> Home</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <div class="row align-items-center justify-content-center mt-5 mx-2 gap-4">
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Girls Birthday Collections" data-price="1250"
+                data-src="https://www.foreverkidz.in/cdn/shop/files/Blushing_Pink_Party_Dress-5015016.jpg?crop=center&height=2100&v=1746014765&width=1500">
+
+                <img src="https://www.foreverkidz.in/cdn/shop/files/Blushing_Pink_Party_Dress-5015016.jpg?crop=center&height=2100&v=1746014765&width=1500"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Girls Birthday Collections</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1250</span>
+
+            </div>
+
+            <div class="col-12 col-md-2 d-flex align-items-center justify-content-center flex-column"
+                onclick="showDressDetails(event)" data-name="Boys Party Collections" data-price="1460"
+                data-src="https://www.mumkins.in/cdn/shop/collections/Catlog-Boys-kids-wear_582x.jpg?v=1686807466">
+
+                <img src="https://www.mumkins.in/cdn/shop/collections/Catlog-Boys-kids-wear_582x.jpg?v=1686807466"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Boys Party Collections</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1460</span>
+
+            </div>
+
+            <div class="col-12 col-md-2 d-flex align-items-center justify-content-center flex-column"
+                onclick="showDressDetails(event)" data-name="Girls Birthday Collections" data-price="1920"
+                data-src="https://www.foreverkidz.in/cdn/shop/files/Dusty_Flower_Girl_Dress-5015830.jpg?v=1746015019">
+                <img src="https://www.foreverkidz.in/cdn/shop/files/Dusty_Flower_Girl_Dress-5015830.jpg?v=1746015019"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Girls Birthday Collections</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1920</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Girls Party Wear" data-price="1140"
+                data-src="https://www.cutedoll.in/cdn/shop/files/3158A.jpg?v=1715855457">
+                <img src="https://www.cutedoll.in/cdn/shop/files/3158A.jpg?v=1715855457" class="imageSection" />
+                <span class="text-center fw-bold mt-3">Girls Party Wear</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1140</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Boys Birthday Collections" data-price="850"
+                data-src="https://www.fayonkids.com/cdn/shop/files/manufactured-by-fayon-kids-noida-u-p-white-waist-coat-with-pant-and-shirt-for-boys-40946021368064.jpg?v=1715939762">
+                <img src="https://www.fayonkids.com/cdn/shop/files/manufactured-by-fayon-kids-noida-u-p-white-waist-coat-with-pant-and-shirt-for-boys-40946021368064.jpg?v=1715939762"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Boys Birthday Collections</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>850</span>
+            </div>
+
+        </div>
+
+        <div class="row align-items-center justify-content-center mt-5 mx-2 gap-4">
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Girls Kalamkari Printed" data-price="1880"
+                data-src="https://www.anantexports.in/cdn/shop/files/IMG-20240111-WA0243.jpg?v=1704962363">
+                <img src="https://www.anantexports.in/cdn/shop/files/IMG-20240111-WA0243.jpg?v=1704962363"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Girls Kalamkari Printed</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1880</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Bear Warm Winter Clothes" data-price="420"
+                data-src="https://images-cdn.ubuy.co.in/669266098f7e63229a44108f-children-baby-boys-clothes-autumn-long.jpg">
+                <img src="https://images-cdn.ubuy.co.in/669266098f7e63229a44108f-children-baby-boys-clothes-autumn-long.jpg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Bear Warm Winter Clothes</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>420</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Girls Festive Collections" data-price="2640"
+                data-src="https://img.joomcdn.net/db47d38da20dd205f3feff29d4d28dc43f550fb2_original.jpeg">
+                <img src="https://img.joomcdn.net/db47d38da20dd205f3feff29d4d28dc43f550fb2_original.jpeg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Girls Festive Collections</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>2640</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Boys Festive Set" data-price="1120"
+                data-src="https://cdn.shopify.com/s/files/1/0583/4820/8201/files/Spunkies9398_1800x1800_5634bfa9-513c-4528-a1b8-908de06cc096_480x480.webp?v=1737348658">
+                <img src="https://cdn.shopify.com/s/files/1/0583/4820/8201/files/Spunkies9398_1800x1800_5634bfa9-513c-4528-a1b8-908de06cc096_480x480.webp?v=1737348658"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Boys Festive Set</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1120</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Girls Wedding Set" data-price="1999"
+                data-src="https://img.faballey.com/images/Product/IGS00062Z/d3.jpg">
+                <img src="https://img.faballey.com/images/Product/IGS00062Z/d3.jpg" class="imageSection" />
+                <span class="text-center fw-bold mt-3">Girls Wedding Set</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1999</span>
+            </div>
+        </div>
+
+        <div class="row align-items-center justify-content-center mt-5 mx-2 gap-4">
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Kids Party Wear" data-price="550"
+                data-src="https://www.onefridayworld.com/cdn/shop/files/2R9A1422_300x.jpg?v=1743151008">
+                <img src="https://www.onefridayworld.com/cdn/shop/files/2R9A1422_300x.jpg?v=1743151008"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Kids Party Wear</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>550</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Boys Kurtha Set" data-price="1470"
+                data-src="https://craftzone.in/backend/uploads/products/SKU0000004028/0b313ef536ddef1b6e8a1679e3981798.webp">
+                <img src="https://craftzone.in/backend/uploads/products/SKU0000004028/0b313ef536ddef1b6e8a1679e3981798.webp"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Boys Kurtha Set</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1470</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Boys Stylish Party Wear" data-price="1360"
+                data-src="https://thetaffy.in/cdn/shop/files/29-01-25-Taffy-Kids-E-com0961-final-Front.jpg?v=1753860034">
+                <img src="https://thetaffy.in/cdn/shop/files/29-01-25-Taffy-Kids-E-com0961-final-Front.jpg?v=1753860034"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Boys Stylish Party Wear</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1360</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Girls Ethinic Wear" data-price="1670"
+                data-src="https://images.biba.in/dw/image/v2/BKQK_PRD/on/demandware.static/-/Sites-biba-product-catalog/default/dwd2a12542/images/aw24/kwswtmt6086aw24pnk_1.jpg?sw=242&sh=363">
+                <img src="https://images.biba.in/dw/image/v2/BKQK_PRD/on/demandware.static/-/Sites-biba-product-catalog/default/dwd2a12542/images/aw24/kwswtmt6086aw24pnk_1.jpg?sw=242&sh=363"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Girls Ethinic Wear</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1670</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Girls Ethinic Wear" data-price="1740"
+                data-src="https://images.biba.in/dw/image/v2/BKQK_PRD/on/demandware.static/-/Sites-biba-product-catalog/default/dwc2a59522/images/aw24/kwntgal6061aw24pnk_1.jpg?sw=242&sh=363">
+                <img src="https://images.biba.in/dw/image/v2/BKQK_PRD/on/demandware.static/-/Sites-biba-product-catalog/default/dwc2a59522/images/aw24/kwntgal6061aw24pnk_1.jpg?sw=242&sh=363"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Girls Ethinic Wear</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1740</span>
+            </div>
+        </div>
+
+        <div class="row align-items-center justify-content-center mt-5 mx-2 gap-4">
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Girls Kurta Plazo" data-price="2240"
+                data-src="https://images.meesho.com/images/products/434363061/gbtgy_512.webp">
+                <img src="https://images.meesho.com/images/products/434363061/gbtgy_512.webp" class="imageSection" />
+                <span class="text-center fw-bold mt-3">Girls Kurta Plazo</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>2240</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Girls Plazo Set" data-price="2690"
+                data-src="https://i.pinimg.com/736x/16/99/a7/1699a79f4ddda355eb3bf311c7ae0792.jpg">
+                <img src="https://i.pinimg.com/736x/16/99/a7/1699a79f4ddda355eb3bf311c7ae0792.jpg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Girls Plazo Set</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>2690</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Twinning Combo Set" data-price="2970"
+                data-src="https://cdn1.npcdn.net/images/ba589ba338127474b0a85c51ee5b5f13_1699456074.webp?md5id=a7a6b51b4da2a493f024aac42d94c7cd&new_width=1000&new_height=1000&w=-62170008925&from=jpeg">
+                <img src="https://cdn1.npcdn.net/images/ba589ba338127474b0a85c51ee5b5f13_1699456074.webp?md5id=a7a6b51b4da2a493f024aac42d94c7cd&new_width=1000&new_height=1000&w=-62170008925&from=jpeg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Twinning Combo Set</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>2970</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Kids Casual Sett" data-price="880"
+                data-src="https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-1297465_alternate10?$plpDeskRF$">
+                <img src="https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-1297465_alternate10?$plpDeskRF$"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Kids Casual Set</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>880</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Kids Casual Set" data-price="2720"
+                data-src="https://5.imimg.com/data5/SELLER/Default/2023/11/359002497/SH/TU/UI/132511052/kids-clothes.jpg">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2023/11/359002497/SH/TU/UI/132511052/kids-clothes.jpg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Kids Casual Set</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>2720</span>
+            </div>
+        </div>
+
+        <div class="container d-none mt-5" id="showMyDressContent">
+            <div class="row">
+                <div class="col-md-4">
+                    <img id="detailImage" class="img-fluid mb-3 dressImage" style="max-height: 400px;" />
+                    <h3 id="detailName"></h3>
+                    <h4 id="detailPrice" class="text-danger"></h4>
+                    <button class="btn btn-info mt-3 mx-2" onclick="addToCart()">Add To Cart</button>
+                    <button class="btn btn-info mt-3 mx-2" onclick="DirectTobuy()">Buy Now</button>
+                </div>
+                <div class="col-md-8">
+                    <h4>Women's Collections</h4>
+                    <span class="bg-success rounded-pill p-1 text-light">4 <i class="fa-solid fa-star"></i></span>
+                    <span class="text-muted">57,359 rating and 1962 reviews</span>
+                    <p class="mt-5" style="cursor: pointer;">Size
+                        <span class="fw-bold border border-danger p-2 mx-2 size-option">XS</span>
+                        <span class="fw-bold border border-danger p-2 mx-2 size-option">S</span>
+                        <span class="fw-bold border border-danger p-2 mx-2 size-option">M</span>
+                        <span class="fw-bold border border-danger p-2 mx-2 size-option">L</span>
+                        <span class="fw-bold border border-danger p-2 mx-2 size-option">XL</span>
+                        <span class="fw-bold border border-danger p-2 mx-2 size-option">XXL</span>
+                    </p>
+
+                    <p class="fw-bold mt-5">Available Offers</p>
+                    <p>
+                        <span class="fw-bold">Bank offer 5%</span>
+                        cashback on Axis Bank Credit Card upto ₹4,000 per statement
+                    </p>
+
+                    <p>
+                        <span class="fw-bold">Bank offer 5%</span>
+                        cashback on Axis Bank Debit Card upto ₹750 per statement
+                    </p>
+
+                    <p>
+                        <span class="fw-bold">Bank offer 10%</span>
+                        off up to ₹1000 on ICICI Bank Credit Card Transactions, on orders of ₹1000
+                    </p>
+
+                    <p>
+                        <span class="fw-bold">Bank offer 10%</span>
+                        Up To ₹30 Instant Cashback on BHIM Payments App. Min Order Value ₹199. Offer Valid Once Per User
+                    </p>
+
+                    <p>
+                        <span class="fw-bold">Bank offer 10%</span>
+                        Flat ₹10 Instant Cashback on Paytm UPI Trxns. Min Order Value ₹500.
+                    </p>
+
+
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-info mt-3 " onclick="hideDetail()">Back to Products</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid d-none" id="cartItemList">
+        </div>
+
+
+        <div class="row justify-content-center">
+            <div class="col-6 d-none border border-danger" id="BuyNowBox"></div>
+        </div>
+
+        <div class="container-fluid d-none" id="WhishlistPage"></div>
+
+
+        <div class="container d-none" id="directlyGetItems"></div>
+
+    </main>
+
+
+    <div class="footer mt-5 bg-dark d-flex justify-content-center align-items-center py-4">
+        <div class="col-12 col-md-6 text-center">
+            <span class="text-primary">ABOUT US</span>
+            <p class="text-muted mt-4">
+                Our pure silk Kancheevaram sarees are directly from our own weavers...
+                Hand-picked threads are beautifully woven by talented artisans.
+                Mayura's custom-made designs are truly unique.
+            </p>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        // show dress details
+        let id = ''
+
+        function showDressDetails(event) {
+            const block = event.currentTarget
+            id = "MS" + Math.floor(Math.random() * 1000000)
+            const name = block.getAttribute('data-name')
+            const price = block.getAttribute('data-price')
+            const src = block.getAttribute('data-src')
+
+            document.getElementById('detailImage').src = src
+            document.getElementById('detailName').innerText = name
+            document.getElementById('detailPrice').innerHTML = `<i class="fa-solid fa-indian-rupee-sign"></i> ${price}`
+
+            document.querySelectorAll('.row.align-items-center.justify-content-center').forEach(row => row.classList.add('d-none'));
+            document.getElementById('showMyDressContent').classList.remove('d-none');
+        }
+
+
+        // back to main page(all dress page)
+        function hideDetail() {
+            document.querySelectorAll('.row.align-items-center.justify-content-center').forEach(row => row.classList.remove('d-none'))
+            document.getElementById('showMyDressContent').classList.add('d-none')
+        }
+
+
+
+        // size slector function
+        let selectedSize = ""
+
+        document.querySelectorAll('.size-option').forEach(span => {
+            span.addEventListener('click', () => {
+                document.querySelectorAll('.size-option').forEach(s => s.classList.remove('bg-danger', 'text-white'))
+                span.classList.add('bg-danger', 'text-white')
+                selectedSize = span.textContent.trim()
+            })
+        })
+
+        document.addEventListener("DOMContentLoaded", () => {
+            updateCartCount();
+        });
+
+
+        // add to my cart page
+        function addToCart() {
+            if (!selectedSize) {
+                alert("Please select a size before adding to cart.")
+                return
+            }
+            const item = {
+                currentDressId: id,
+                name: document.getElementById("detailName").textContent,
+                price: document.getElementById("detailPrice").textContent.replace("₹", ""),
+                src: document.getElementById("detailImage").getAttribute('src'),
+                size: selectedSize
+            }
+
+            let cart = JSON.parse(localStorage.getItem("cartItem")) || []
+
+
+            cart.push(item)
+
+            localStorage.setItem("cartItem", JSON.stringify(cart))
+            alert('Item add to cart')
+            updateCartCount();
+        }
+
+
+
+        // direct order Placed function
+        function DirectTobuy() {
+            if (!selectedSize) {
+                alert("Please select a size before adding to cart.")
+                return
+            }
+
+            document.getElementById('showMyDressContent').classList.add('d-none');
+            let directOrder = document.getElementById('directlyGetItems')
+            directOrder.classList.remove('d-none')
+
+            const item = {
+                currentDressId: id,
+                name: document.getElementById("detailName").textContent,
+                price: document.getElementById("detailPrice").textContent.replace("₹", ""),
+                src: document.getElementById("detailImage").getAttribute('src'),
+            };
+
+            localStorage.setItem("directBuyItem", JSON.stringify(item));
+
+            directOrder.innerHTML = `
+                <h3>${item.name}</h3>
+                <img src="${item.src}" style="max-width:200px;"/>
+                <p>Price: ₹${item.price}</p>
+                <button class="btn btn-success mt-3" onclick="DirectConfirmOrder(event,'${item.currentDressId}')">Confirm Order</button>
+    `;
+        }
+
+
+
+        window.DirectConfirmOrder = function (e, id) {
+
+            e.preventDefault()
+
+            const buyBox = document.getElementById('BuyNowBox')
+            buyBox.classList.remove('d-none')
+
+            alert('Your order has confirmed')
+
+            let orders = JSON.parse(localStorage.getItem("orders")) || [];
+            let users = JSON.parse(localStorage.getItem('currentUser')) || {};
+            let item = JSON.parse(localStorage.getItem("directBuyItem")) || {};
+
+
+            let deliverDate = new Date()
+            deliverDate.setDate(deliverDate.getDate() + 7)
+            orders.push({
+                ...item,
+                orderDate: new Date().toLocaleString(),
+                deliverDate: deliverDate.toLocaleDateString(),
+                customerName: users?.usrFullName,
+                customerAddress: users?.usrAddress,
+                customerMobile: users?.usrMobile
+            });
+
+            localStorage.setItem("orders", JSON.stringify(orders));
+            localStorage.removeItem("directBuyItem");
+
+            setTimeout(() => location.reload(), 1000)
+
+            buyBox.innerHTML = `
+                        <div class='d-flex justify-content-center flex-column'>
+                         <img src='https://icons.veryicon.com/png/o/miscellaneous/real-estate-project-related/confirm-27.png' alt='confirmOrder' style="width:60px;height:150px"/>
+                         <h3 class=text-center>Order Confirmed</h3>
+                        </div>
+                    `
+        }
+
+
+
+
+        // myCart page
+        function showMyCart() {
+
+            document.querySelectorAll('.row.align-items-center.justify-content-center')
+                .forEach(row => row.classList.add('d-none'));
+
+            const cartUI = document.getElementById('cartItemList');
+
+            cartUI.classList.remove('d-none');
+            cartUI.classList.add('d-block');
+
+            document.getElementById('showMyDressContent').classList.add('d-none');
+
+            const showCartArea = document.getElementById("cartItemList");
+
+            const cart = JSON.parse(localStorage.getItem("cartItem")) || []
+
+            if (cart.length === 0) {
+                showCartArea.innerHTML = `
+                         <ul class="list-group">
+                            <li class="list-group-item">Your Cart Is Empty</li>
+                        </ul>
+                        `
+                return
+            }
+
+
+
+            let cartHTML = '<ul class="list-group">';
+            cart.forEach((item, index) => {
+                cartHTML += `
+                <li class="list-group-item">
+                    <div class=" d-flex align-items-start">
+                        <div class="me-3 text-center">
+                            <img src="${item.src}" class="card-img-top" alt="${item.name}" style="max-width: 150px; height: auto;"/>
+
+                    
+                            <div class="d-flex flex-row gap-5 w-100">
+                                <div class="d-flex flex-row border border-danger justify-content-between bg-success">
+                                    <button class="btn btn-sm text-light" style="font-size: 24px;" onclick="decreaseItem(event)">-</button>
+                                    <p class="fw-bold text-light mb-0 mt-2 countItem">1</p>
+                                    <button class="btn btn-sm text-light" style="font-size: 24px;" onclick="IncreaseItem(event)">+</button>
+                                </div>
+
+                                <button type="button" onclick="buyItems(event,'${item.currentDressId}')" class='btn btn-success w-100'>Buy Now</button>
+                            </div>
+                        </div>
+
+
+                    <div class="d-flex flex-row justify-content-between w-100">
+                        <div>
+                            <strong>${item.name}</strong><br/>
+                            <p id="itemCost"><strong>Price: </strong>${item.price}</p>
+                            <p><strong>size: </strong>${item.size}</p>
+                        </div>
+
+                        <div class="text-end">
+                            <span style="font-size: 30px;cursor:pointer" onclick="removeFromCart(event,'${item.currentDressId}')">&times;</span>
+                        </div>
+                    </div>
+                    </div>
+                </li>
+            `;
+            });
+            cartHTML += '</ul>';
+
+
+            showCartArea.innerHTML = cartHTML;
+
+
+            updateCartCount();
+        }
+
+
+        // first box of buybox container
+        window.buyItems = function (e, id) {
+            e.preventDefault()
+
+            const cartUI = document.getElementById('cartItemList');
+            cartUI.style.filter = "blur(5px)";
+            const buyBox = document.getElementById('BuyNowBox')
+            buyBox.classList.remove('d-none')
+
+            const cart = JSON.parse(localStorage.getItem("cartItem")) || []
+            const users = JSON.parse(localStorage.getItem('currentUser')) || {};
+
+
+            const matchId = cart.find(MSItem => MSItem.currentDressId === id)
+
+
+            if (matchId && users) {
+                buyBox.innerHTML = `
+                        <div>
+                            <strong>${matchId.name}</strong><br/>
+                            <br/>
+                            <p id="itemCost"><strong>Price: </strong>${matchId.price}</p>
+                            <p><strong>size: </strong>${matchId.size}</p>
+                        </div>
+                        
+                        <div class="d-flex flex-row gap-5">
+                            <button type="button" class='btn btn-success w-50' onclick='BackToMyCart(event)'>Cancel Item</button>
+                            <button type="button" class='btn btn-success w-50' onclick='showNxtBuyBox(event,"${users.usrFullName}", "${users.usrAddress}", "${users.usrMobile}")'>Next</button>    
+                        </div>
+                    `
+            }
+
+        }
+
+
+        // second page of buyBox container
+        window.showNxtBuyBox = function (e) {
+            e.preventDefault()
+
+            const buyBox = document.getElementById('BuyNowBox')
+            buyBox.classList.remove('d-none')
+
+            let users = JSON.parse(localStorage.getItem('currentUser')) || {};
+            const cart = JSON.parse(localStorage.getItem("cartItem")) || []
+
+
+            if (users.length === 0) {
+                alert("No registered users found");
+                return;
+            }
+
+
+            buyBox.innerHTML = `
+                        <div>
+                            <p><strong>Name:</strong>${users.usrFullName}</p>
+                            <br/>
+                            <p id="itemCost"><strong>Address: </strong>${users.usrAddress}</p>
+                            <br/>
+                            <p><strong>Mobile: </strong>${users.usrMobile}</p>
+                        </div>
+
+                         <div class="d-flex flex-row justify-content-center mt-5">
+                            <button type="button" class='btn btn-success w-50' onclick='OrderMyItems(event,"${cart[0]?.currentDressId}")'>Order Item</button>
+                        </div>
+             `
+        }
+
+        // final order confirm box in buybox container
+        window.OrderMyItems = function (e, id) {
+
+            e.preventDefault()
+
+            const buyBox = document.getElementById('BuyNowBox')
+            buyBox.classList.remove('d-none')
+
+            alert('Your order has confirmed')
+
+
+            let cart = JSON.parse(localStorage.getItem("cartItem")) || []
+            let orders = JSON.parse(localStorage.getItem("orders")) || [];
+            let users = JSON.parse(localStorage.getItem('currentUser')) || {};
+
+
+            let orderedItem = cart.find(item => item.currentDressId === id);
+
+            if (orderedItem) {
+                let deliverDate = new Date()
+                deliverDate.setDate(deliverDate.getDate() + 7)
+                orders.push({
+                    ...orderedItem,
+                    orderDate: new Date().toLocaleString(),
+                    deliverDate: deliverDate.toLocaleDateString(),
+                    customerName: users?.usrFullName,
+                    customerAddress: users?.usrAddress,
+                    customerMobile: users?.usrMobile
+                });
+            }
+
+            let Newcart = cart.filter(item => item.currentDressId !== id);
+
+            localStorage.setItem("cartItem", JSON.stringify(Newcart));
+            localStorage.setItem("orders", JSON.stringify(orders));
+
+            document.getElementById("cartCount").innerText = Newcart.length;
+
+            setTimeout(() => location.reload(), 1000)
+
+            buyBox.innerHTML = `
+                        <div class='d-flex justify-content-center flex-column'>
+                         <img src='https://icons.veryicon.com/png/o/miscellaneous/real-estate-project-related/confirm-27.png' alt='confirmOrder' style="width:60px;height:150px"/>
+                         <h3 class=text-center>Order Confirmed</h3>
+                        </div>
+                    `
+
+        }
+
+
+        // cancel button in buyBox container
+        window.BackToMyCart = function (e) {
+            e.preventDefault()
+            const buyBox = document.getElementById('BuyNowBox')
+            buyBox.classList.add('d-none')
+
+            const cartUI = document.getElementById('cartItemList');
+            cartUI.style.filter = "blur(0px)";
+
+            location.reload();
+        }
+
+
+        // IncreaseItem function for myCartPage
+        window.IncreaseItem = function (e) {
+            e.preventDefault();
+            const countElement = e.target.closest(".d-flex").querySelector(".countItem");
+            let count = parseInt(countElement.textContent, 10) || 0;
+            countElement.textContent = count + 1;
+        }
+
+
+        // decreaseItem function for myCartPage
+        window.decreaseItem = function (e) {
+            e.preventDefault();
+            const countElement = e.target.closest(".d-flex").querySelector(".countItem");
+            let count = parseInt(countElement.textContent, 10) || 0;
+            if (count > 1) {
+                countElement.textContent = count - 1;
+            }
+        }
+
+
+        // myCart Notification Count
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem("cartItem")) || [];
+            document.getElementById("cartCount").innerText = cart.length;
+        }
+
+
+        function removeFromCart(e, id) {
+            e.preventDefault()
+            let cart = JSON.parse(localStorage.getItem("cartItem")) || [];
+            cart = cart.filter(itm => itm.currentDressId !== id)
+            localStorage.setItem("cartItem", JSON.stringify(cart));
+            updateCartCount();
+            showMyCart();
+        }
+
+    </script>
+</body>
+
+</html>

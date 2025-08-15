@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="practice1.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Mayura Silks</title>
+    <script>
+        function userLogin() {
+            window.location.href = "UserLogin.html"
+        }
+    </script>
+</head>
+
+<body>
+    <div class="fluid-container name-header">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+
+                <div class="col-md-3 col-12 mb-2 d-flex flex-md-row flex-column justify-content-md-end">
+                    <img src="https://www.pngplay.com/wp-content/uploads/12/Peacock-PNG-Pic-Background.png"
+                        class="peacockLogo" />
+                    <h1 class="text-success brand">MayuRa</h1>
+                    <p class="text-danger subBrand">Silks</p>
+                </div>
+
+                <div class="col-md-4 col-12 mb-2">
+                    <form action="">
+                        <input type="search" class="form-control" id="Dsearch" placeholder="Search here!" />
+                    </form>
+                </div>
+                <div
+                    class=" col-md-5 col-12 insideNav d-flex flex-column flex-md-row justify-content-md-end align-items-center text-center gap-3">
+                    <span onclick="userLogin()"><i class="fa-solid fa-lock"></i> LogIn</span>
+                </div>
+
+                <marquee direction="left" style="color: crimson;font-weight: bold;">
+                    <span>Women's Sudi & Saree Collections || Men's Traditional & Casual Outfit || Kid's
+                        Collections 🦚 </span>
+                    <span>Branches 🦚 Tiruppur || Erode || Namakkal || Coimbatore</span>
+                </marquee>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row gap-3 align-items-center justify-content-center mt-4">
+
+            <div class="col-12 col-md-2  mx-2 mt-2 d-flex justify-content-center align-items-center shop-container ">
+                <span><i class="fa-solid fa-basket-shopping mx-2"></i>Easy Shopping</span>
+            </div>
+
+            <div class="col-12 col-md-2  mx-2 mt-2 d-flex justify-content-center align-items-center shop-container">
+                <span><i class="fa-solid fa-headphones-simple mx-2"></i>24/7 Support</span>
+            </div>
+
+            <div class="col-12  col-md-2 mx-2 mt-2 d-flex justify-content-center align-items-center shop-container">
+                <span><i class="fa-solid fa-recycle mx-2"></i>Customer Satisfaction</span>
+            </div>
+
+            <div class="col-12 col-md-2  mx-2 mt-2 d-flex justify-content-center align-items-center shop-container">
+                <span><i class="fa-solid fa-gift mx-2"></i>Numerous Collections</span>
+            </div>
+
+        </div>
+
+        <div class="row align-items-center justify-content-center mt-5 mx-2 g-6 gap-4">
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Visco Rayan Kurti" data-price="780"
+                data-src="https://i.pinimg.com/474x/30/36/dd/3036ddabf0c0ed2ede810b04987a76c0.jpg">
+
+                <img src="https://i.pinimg.com/474x/30/36/dd/3036ddabf0c0ed2ede810b04987a76c0.jpg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Visco Rayan Kurti</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>780</span>
+
+            </div>
+
+            <div class="col-12 col-md-2 d-flex align-items-center justify-content-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Silk Blend Kurti" data-price="460"
+                data-src="https://i.pinimg.com/originals/4a/76/06/4a7606cb5a88bf46ffb60d001625a4e3.jpg">
+
+                <img src="https://i.pinimg.com/originals/4a/76/06/4a7606cb5a88bf46ffb60d001625a4e3.jpg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Silk Blend Kurti</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>460</span>
+
+            </div>
+
+            <div class="col-12 col-md-2 d-flex align-items-center justify-content-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Cotton Rayan Kurtha" data-price="620"
+                data-src="https://firsthub.in/public/uploads/all/jkucc0gZXOxOIogtFqRp57fvqUCu7cUys0Z3ENta.webp">
+                <img src="https://firsthub.in/public/uploads/all/jkucc0gZXOxOIogtFqRp57fvqUCu7cUys0Z3ENta.webp"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Cotton Rayan Kurtha</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>620</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Silk Blend Kurtha" data-price="948"
+                data-src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/2025/MAY/13/2NZI1mxR_0d5d636ada0e459e9c29d8718c4ed7b0.jpg">
+                <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/2025/MAY/13/2NZI1mxR_0d5d636ada0e459e9c29d8718c4ed7b0.jpg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Silk Blend Kurtha</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>948</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Printed Kurtha" data-price="550"
+                data-src="https://i0.wp.com/youmeandtrends.com/wp-content/uploads/2016/01/salwar-kameez-suit-neck-designs-images.jpg">
+                <img src="https://i0.wp.com/youmeandtrends.com/wp-content/uploads/2016/01/salwar-kameez-suit-neck-designs-images.jpg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Printed Kurtha</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>550</span>
+            </div>
+
+        </div>
+
+        <div class="row align-items-center justify-content-center mt-5 mx-2 gap-4">
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Men's formal shirt" data-price="850"
+                data-src="https://images.meesho.com/images/products/392295301/9ntsj_512.jpg">
+
+                <img src="https://images.meesho.com/images/products/392295301/9ntsj_512.jpg" class="imageSection" />
+                <span class="text-center fw-bold mt-3">Men's Formal Shirt</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>850</span>
+
+            </div>
+
+            <div class="col-12 col-md-2 d-flex align-items-center justify-content-center flex-column"
+                onclick="showDressDetails(event)" data-name="Men's ethnic wear" data-price="1460"
+                data-src="https://images.jdmagicbox.com/quickquotes/images_main/mens-ethnic-wear-navabi-dress-2188635862-ws9y9wgw.jpg">
+
+                <img src="https://images.jdmagicbox.com/quickquotes/images_main/mens-ethnic-wear-navabi-dress-2188635862-ws9y9wgw.jpg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Men's Ethnic Wear</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1460</span>
+
+            </div>
+
+            <div class="col-12 col-md-2 d-flex align-items-center justify-content-center flex-column"
+                onclick="showDressDetails(event)" data-name="Men's Casual" data-price="920"
+                data-src="https://blog.g3fashion.com/wp-content/uploads/2021/06/mens-casual-wear.jpg">
+                <img src="https://blog.g3fashion.com/wp-content/uploads/2021/06/mens-casual-wear.jpg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Men's Casual</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>920</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Silk Blend Kurtha" data-price="1140"
+                data-src="https://cdn.sareeka.com/image/cache/data2021/cream-plain-ceremonial-dhoti-kurta-171447-320x440.jpg">
+                <img src="https://cdn.sareeka.com/image/cache/data2021/cream-plain-ceremonial-dhoti-kurta-171447-320x440.jpg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Men's Party Wear</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1140</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Men's Regular Fit Checked" data-price="850"
+                data-src="https://imagescdn.allensolly.com/img/app/product/3/39837582-18970416.jpg?auto=format&w=390">
+                <img src="https://imagescdn.allensolly.com/img/app/product/3/39837582-18970416.jpg?auto=format&w=390"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Men's Regular Fit Checked</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>850</span>
+            </div>
+
+        </div>
+
+
+        <div class="row align-items-center justify-content-center mt-5 mx-2 gap-4">
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Office Wear" data-price="780"
+                data-src="https://www.forsarees.com/cdn/shop/collections/White_Office_Wear_Saree.jpg?v=1723537526&width=750">
+
+                <img src="https://www.forsarees.com/cdn/shop/collections/White_Office_Wear_Saree.jpg?v=1723537526&width=750"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Office Wear</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>780</span>
+
+            </div>
+
+            <div class="col-12 col-md-2 d-flex align-items-center justify-content-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Embroidered Silk Saree" data-price="1460"
+                data-src="https://mysilklove.com/cdn/shop/files/msl-l4.jpg?v=1702463192&width=1000">
+
+                <img src="https://mysilklove.com/cdn/shop/files/msl-l4.jpg?v=1702463192&width=1000"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Embroidered Silk Saree</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1460</span>
+
+            </div>
+
+            <div class="col-12 col-md-2 d-flex align-items-center justify-content-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Disgner Saree" data-price="2620"
+                data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-o_1M38RCtuQgmK-6Qwa-KvcXKxQPkrGrzQ&s">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-o_1M38RCtuQgmK-6Qwa-KvcXKxQPkrGrzQ&s"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Disgner Saree</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>2620</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Women Disgner Silk Saree" data-price="960"
+                data-src="https://textilemela.com/images/product/2022/09/royal-presents-rutba-vol-2-indian-women-designer-silk-saree-party-wedding-reception-bridal-wear-collection-3139-2022-09-13_11_51_29.jpeg">
+                <img src="https://textilemela.com/images/product/2022/09/royal-presents-rutba-vol-2-indian-women-designer-silk-saree-party-wedding-reception-bridal-wear-collection-3139-2022-09-13_11_51_29.jpeg"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Women Disgner Silk Saree</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>960</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Kanchipuram Saree" data-price="1550"
+                data-src="https://rooprekha.com/cdn/shop/products/photo_2022-08-05_07-08-31.jpg?v=1680755739">
+                <img src="https://rooprekha.com/cdn/shop/products/photo_2022-08-05_07-08-31.jpg?v=1680755739"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Kanchipuram Saree</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1550</span>
+            </div>
+
+        </div>
+
+
+        <div class="row align-items-center justify-content-center mt-5 mx-2 gap-4">
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Girls Birthday Collections" data-price="1250"
+                data-src="https://www.foreverkidz.in/cdn/shop/files/Blushing_Pink_Party_Dress-5015016.jpg?crop=center&height=2100&v=1746014765&width=1500">
+
+                <img src="https://www.foreverkidz.in/cdn/shop/files/Blushing_Pink_Party_Dress-5015016.jpg?crop=center&height=2100&v=1746014765&width=1500"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Girls Birthday Collections</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1250</span>
+
+            </div>
+
+            <div class="col-12 col-md-2 d-flex align-items-center justify-content-center flex-column"
+                onclick="showDressDetails(event)" data-name="Boys Party Collections" data-price="1460"
+                data-src="https://www.mumkins.in/cdn/shop/collections/Catlog-Boys-kids-wear_582x.jpg?v=1686807466">
+
+                <img src="https://www.mumkins.in/cdn/shop/collections/Catlog-Boys-kids-wear_582x.jpg?v=1686807466"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Boys Party Collections</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1460</span>
+
+            </div>
+
+            <div class="col-12 col-md-2 d-flex align-items-center justify-content-center flex-column"
+                onclick="showDressDetails(event)" data-name="Girls Birthday Collections" data-price="1920"
+                data-src="https://www.foreverkidz.in/cdn/shop/files/Dusty_Flower_Girl_Dress-5015830.jpg?v=1746015019">
+                <img src="https://www.foreverkidz.in/cdn/shop/files/Dusty_Flower_Girl_Dress-5015830.jpg?v=1746015019"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Girls Birthday Collections</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1920</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Girls Party Wear" data-price="1140"
+                data-src="https://www.cutedoll.in/cdn/shop/files/3158A.jpg?v=1715855457">
+                <img src="https://www.cutedoll.in/cdn/shop/files/3158A.jpg?v=1715855457" class="imageSection" />
+                <span class="text-center fw-bold mt-3">Girls Party Wear</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>1140</span>
+            </div>
+
+            <div class="col-12 col-md-2 d-flex justify-content-center align-items-center flex-column"
+                onclick="showDressDetails(event)" data-name="Boys Birthday Collections" data-price="850"
+                data-src="https://www.fayonkids.com/cdn/shop/files/manufactured-by-fayon-kids-noida-u-p-white-waist-coat-with-pant-and-shirt-for-boys-40946021368064.jpg?v=1715939762">
+                <img src="https://www.fayonkids.com/cdn/shop/files/manufactured-by-fayon-kids-noida-u-p-white-waist-coat-with-pant-and-shirt-for-boys-40946021368064.jpg?v=1715939762"
+                    class="imageSection" />
+                <span class="text-center fw-bold mt-3">Boys Birthday Collections</span>
+                <span class="fw-bold text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>850</span>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="container d-none mt-5" id="showMyDressContent">
+        <div class="row">
+            <div class="col-md-4">
+                <img id="detailImage" class="img-fluid mb-3 dressImage" style="max-height: 400px;" />
+                <h3 id="detailName"></h3>
+                <h4 id="detailPrice" class="text-danger"></h4>
+                <button class="btn btn-info mt-3 mx-2" onclick="addToCart()">Add To Cart</button>
+                <button class="btn btn-info mt-3 mx-2" onclick="buyNow()">Buy Now</button>
+            </div>
+            <div class="col-md-8">
+                <h4>Women's Collections</h4>
+                <span class="bg-success rounded-pill p-1 text-light">4 <i class="fa-solid fa-star"></i></span>
+                <span class="text-muted">57,359 rating and 1962 reviews</span>
+                <p class="mt-5" style="cursor: pointer;">Size
+                    <span class="fw-bold border border-danger p-2 mx-2 size-option">XS</span>
+                    <span class="fw-bold border border-danger p-2 mx-2 size-option">S</span>
+                    <span class="fw-bold border border-danger p-2 mx-2 size-option">M</span>
+                    <span class="fw-bold border border-danger p-2 mx-2 size-option">L</span>
+                    <span class="fw-bold border border-danger p-2 mx-2 size-option">XL</span>
+                    <span class="fw-bold border border-danger p-2 mx-2 size-option">XXL</span>
+                </p>
+
+                <p class="fw-bold mt-5">Available Offers</p>
+                <p>
+                    <span class="fw-bold">Bank offer 5%</span>
+                    cashback on Axis Bank Credit Card upto ₹4,000 per statement
+                </p>
+
+                <p>
+                    <span class="fw-bold">Bank offer 5%</span>
+                    cashback on Axis Bank Debit Card upto ₹750 per statement
+                </p>
+
+                <p>
+                    <span class="fw-bold">Bank offer 10%</span>
+                    off up to ₹1000 on ICICI Bank Credit Card Transactions, on orders of ₹1000
+                </p>
+
+                <p>
+                    <span class="fw-bold">Bank offer 10%</span>
+                    Up To ₹30 Instant Cashback on BHIM Payments App. Min Order Value ₹199. Offer Valid Once Per User
+                </p>
+
+                <p>
+                    <span class="fw-bold">Bank offer 10%</span>
+                    Flat ₹10 Instant Cashback on Paytm UPI Trxns. Min Order Value ₹500.
+                </p>
+
+
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-info mt-3 " onclick="hideDetail()">Back to Products</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer mt-5 bg-dark d-flex justify-content-center align-items-center py-4">
+        <div class="col-12 col-md-6 text-center">
+            <span class="text-primary">ABOUT US</span>
+            <p class="text-muted mt-4">
+                Our pure silk Kancheevaram sarees are directly from our own weavers...
+                Hand-picked threads are beautifully woven by talented artisans.
+                Mayura's custom-made designs are truly unique.
+            </p>
+        </div>
+    </div>
+
+
+    <script>
+        function showDressDetails(event) {
+            const block = event.currentTarget
+            id = "MS" + Math.floor(Math.random() * 1000000)
+            const name = block.getAttribute('data-name')
+            const price = block.getAttribute('data-price')
+            const src = block.getAttribute('data-src')
+
+            document.getElementById('detailImage').src = src
+            document.getElementById('detailName').innerText = name
+            document.getElementById('detailPrice').innerHTML = `<i class="fa-solid fa-indian-rupee-sign"></i> ${price}`
+
+            document.querySelectorAll('.row.align-items-center.justify-content-center').forEach(row => row.classList.add('d-none'));
+            document.getElementById('showMyDressContent').classList.remove('d-none');
+        }
+
+        function addToCart() {
+            alert("Kindly login and add your products")
+        }
+
+        function buyNow() {
+            alert("Kindly login and buy your products")
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lexend:wght@100..900&family=Lobster&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Playwrite+NL+Guides&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Special+Gothic+Expanded+One&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+.name-header {
+    background-color: yellow;
+}
+
+.brand {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+}
+
+.subBrand {
+    font-size: 25px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    margin-top: 40px;
+}
+
+.peacockLogo {
+    width: 80px;
+    height: 100px;
+}
+
+.insideNav span {
+    cursor: pointer;
+    margin: 5px 10px;
+    display: inline-block;
+}
+
+#Dsearch {
+    max-width: 100%;
+    margin: 10px auto;
+}
+
+.shop-container {
+    width: 10px;
+    height: 140px;
+    background-color: antiquewhite;
+}
+
+.shop-container i {
+    color: red;
+}
+
+.imageSection {
+    width: 200px;
+    height: 280px;
+    transition: ease 0.5s;
+    border: 1px dotted gray;
+}
+
+.dressImage {
+    position: relative;
+}
+
+.heartImg {
+    position: fixed;
+    left: 32%;
+    top: 22%;
+    font-size: x-large;
+    color: rgb(17, 14, 14);
+    cursor: pointer;
+}
+
+.imageSection:hover {
+    transform: scale(1.1);
+}
+
+.footer {
+    width: 100vw;
+    height: 30vh;
+    color: white;
+}
+
+@media only screen and (min-width:468px) {
+    .insideNav {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .insideNav span {
+        display: block;
+        margin: 8px 0px;
+    }
+
+    .Dsearch {
+        margin-left: 0;
+    }
+}
+
+#LandingImage {
+    background-image: url('https://mayurasilks.online/wp-content/uploads/2025/04/mayura-silk-logo-960x443.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 85vh;
+    position: relative;
+}
+
+#AdminLog {
+    background-image: url('https://content.jdmagicbox.com/comp/salem/w3/0427px427.x427.170608140707.x9w3/catalogue/sellers-women-s-boutique-fair-lands-salem-ladies-readymade-garment-retailers-2htdw1r.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+#adminImg img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#showMyStockContent {
+    transition: all 0.4s ease-in-out;
+}
+
+.size-option.bg-danger {
+    border-width: 4px;
+    scale: 1.1;
+    transition: all 0.2s ease;
+}
+
+#LoginImage {
+    background: url('https://blog.stylecaret.com/wp-content/uploads/2020/09/21-Regional-Sarees-of-India.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 90vh;
+}
+
+#BuyNowBox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    z-index: 999;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+#ordercontainer {
+    background: url('https://www.drapery-silk.com/cdn/shop/files/04-09-24-drapery-ecom0356-copy.jpg?v=1734281369');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 90vh;
+}
+
+#ulDesign {
+    font-size: 20px;
+    font-weight: bold;
+}
